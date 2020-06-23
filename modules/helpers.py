@@ -769,7 +769,7 @@ def default_creds_category(http_object):
                 http_object.category = 'unauth'
             if ('Index of /' in http_object.page_title or
                     'Directory Listing For /' in http_object.page_title or
-                    'Directory of /' in http_object.page_title.):
+                    'Directory of /' in http_object.page_title):
                 http_object.category = 'dirlist'
             if '404 Not Found' in http_object.page_title:
                 http_object.category = 'notfound'        
