@@ -19,7 +19,8 @@ RUN	git clone https://github.com/ChrisTruncer/EyeWitness.git
 
 WORKDIR /home/$user/EyeWitness
 
-RUN cd setup && \
+RUN git checkout Python3 && \
+    cd setup && \
     ./setup.sh && \
     cd .. && \
     chown -R $user:$user /home/$user/EyeWitness && \
